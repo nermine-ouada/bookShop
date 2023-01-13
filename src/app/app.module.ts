@@ -14,9 +14,10 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AuthModule } from "./auth/auth.module";
 import { HttpClient } from "node-angular-http-client";
 import { BookFormComponent } from './book-form/book-form.component';
+import { NewComponentComponent } from './new-component/new-component.component';
 
 @NgModule({
-    declarations:[AppComponent, CartComponent, LoginComponent, RegisterComponent, BookFormComponent],  
+    declarations:[AppComponent, CartComponent, LoginComponent, RegisterComponent, BookFormComponent, NewComponentComponent],  
     imports:[BrowserModule, FormsModule,BooksModule,AppRoutingModule,AuthModule, HttpClientModule],
     bootstrap:[AppComponent],
    
