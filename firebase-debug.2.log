@@ -1,0 +1,47 @@
+[debug] [2023-01-13T13:28:46.764Z] ----------------------------------------------------------------------
+[debug] [2023-01-13T13:28:46.766Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nermi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2023-01-13T13:28:46.767Z] CLI Version:   11.20.0
+[debug] [2023-01-13T13:28:46.767Z] Platform:      win32
+[debug] [2023-01-13T13:28:46.767Z] Node Version:  v18.13.0
+[debug] [2023-01-13T13:28:46.768Z] Time:          Fri Jan 13 2023 14:28:46 GMT+0100 (Central European Standard Time)
+[debug] [2023-01-13T13:28:46.768Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-13T13:28:46.893Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-13T13:28:46.893Z] > authorizing via signed-in user (nermine.ouada12@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[warn] !  hub: emulator hub unable to start on port 4400, starting on 4401 instead. {"metadata":{"emulator":{"name":"hub"},"message":"emulator hub unable to start on port 4400, starting on 4401 instead."}}
+[warn] !  logging: Logging Emulator unable to start on port 4500, starting on 4501 instead. {"metadata":{"emulator":{"name":"logging"},"message":"Logging Emulator unable to start on port 4500, starting on 4501 instead."}}
+[debug] [2023-01-13T13:28:46.912Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  hosting: Hosting Emulator unable to start on port 5000, starting on 5002 instead. {"metadata":{"emulator":{"name":"hosting"},"message":"Hosting Emulator unable to start on port 5000, starting on 5002 instead."}}
+[debug] [2023-01-13T13:28:46.913Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-01-13T13:28:46.913Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4401},{"address":"::1","family":"IPv6","port":4401}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4501}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project my-app-28475. This may result in unexpected behavior. 
+[debug] [2023-01-13T13:28:46.933Z] [hub] writing locator at C:\Users\nermi\AppData\Local\Temp\hub-my-app-28475.json
+[debug] [2023-01-13T13:28:46.993Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-app-28475/sites 
+[debug] [2023-01-13T13:28:48.007Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-app-28475/sites 200
+[debug] [2023-01-13T13:28:48.007Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-app-28475/sites {"sites":[{"name":"projects/my-app-28475/sites/my-app-28475","defaultUrl":"https://my-app-28475.web.app","appId":"1:126246764851:web:4304c82fcb9457919ffe46","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-13T13:28:48.008Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-app-28475/webApps/1:126246764851:web:4304c82fcb9457919ffe46/config [none]
+[debug] [2023-01-13T13:28:48.910Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-app-28475/webApps/1:126246764851:web:4304c82fcb9457919ffe46/config 200
+[debug] [2023-01-13T13:28:48.910Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-app-28475/webApps/1:126246764851:web:4304c82fcb9457919ffe46/config {"projectId":"my-app-28475","appId":"1:126246764851:web:4304c82fcb9457919ffe46","storageBucket":"my-app-28475.appspot.com","apiKey":"AIzaSyBEyem0RGnhcGhyawweR22Es4ogmm_Iwyw","authDomain":"my-app-28475.firebaseapp.com","messagingSenderId":"126246764851"}
+[debug] [2023-01-13T13:28:48.920Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-app-28475 [none]
+[debug] [2023-01-13T13:28:49.217Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-app-28475 200
+[debug] [2023-01-13T13:28:49.217Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-app-28475 {"projectId":"my-app-28475","projectNumber":"126246764851","displayName":"my-app","name":"projects/my-app-28475","resources":{"hostingSite":"my-app-28475"},"state":"ACTIVE","etag":"1_9825b9aa-d657-4d9a-a668-35ff9bf2be35"}
+[info] i  hosting[my-app-28475]: Serving hosting files from: dist/my-app {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/my-app\u001b[22m"}}
+[info] +  hosting[my-app-28475]: Local server: http://127.0.0.1:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5002\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ 127.0.0.1:5002 │
+└──────────┴────────────────┘
+  Emulator Hub running at 127.0.0.1:4401
+  Other reserved ports: 4501
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-01-13T13:34:27.661Z] Received signal SIGHUP 1

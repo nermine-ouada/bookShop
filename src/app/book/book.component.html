@@ -1,0 +1,24 @@
+<li class="book">
+    <img [src]="book.image" [alt]="book.name" width="100">
+    <p class="title">{{book.name |titlecase}} by {{book.author |titlecase}}</p>
+    <p class="currency">{{book.price |currency}}</p>
+    <ng-container *ngIf="!isSoldOut">
+        <button *ngIf="!isInCart" (click)="addToCart()">Add to Cart</button>
+        <button class="remove" *ngIf="isInCart" (click)="removeFromCart()">Remove From Cart</button>
+        <ng-container *ngIf="!isInCart">
+            <button (click)="addition()" *ngIf="!isInCart" class="add" [disabled]="addDisabled">+</button>
+            <span>{{i}}</span>
+            <button (click)="substract()" *ngIf="!isInCart" class="add" [disabled]="subDisabled">-</button>
+        </ng-container>
+
+    </ng-container>
+
+    <ng-container *ngIf="isSoldOut">
+        <p class="out">Out Of Stock</p>
+    </ng-container>
+    <ng-container>
+        <button (click)="deleteBook()">Delete Book</button>
+        <button (click)="updateBook()">Update Book</button>
+
+    </ng-container>
+</li>

@@ -1,0 +1,11 @@
+<h1>Your Cart</h1>
+<div class="selection" *ngIf="getCart().length>0">
+    <div class="display" *ngFor="let book of getCart()">
+        <div>{{book.name}}</div>
+        <div><img src="{{book.image}}" alt="{{book.name}}"></div>
+        <div>{{i}}</div>
+    </div>
+
+</div>
+
+<div style="color:red;" *ngIf="getCart().length ==0">Empty Cart</div>
