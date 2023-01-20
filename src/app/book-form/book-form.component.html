@@ -1,53 +1,25 @@
-<form (submit)="addBook()" #BookForm="ngForm">
-   <div>
-      <label for="name">Name</label>
-      <input type="text" id="name" [(ngModel)]="form.name" name="name" #name="ngModel" placeholder="enter book name" required>
+<div class="content">
+   <div class="full-page">
+      <form (submit)="addBook()" #BookForm="ngForm">
+
+         <input type="text" id="name" [(ngModel)]="form.name" name="name" #name="ngModel" placeholder="enter book name"
+            required>
+
+         <input type="text" id="author" [(ngModel)]="form.author" name="author" #author="ngModel"
+            placeholder="enter author" required>
+
+         <input type="text" placeholder="enter book image link" id="image" name="image" [(ngModel)]="form.image"
+            #image="ngModel" required>
+
+
+         <input type="text" id="price" placeholder="enter book price" name="price" [(ngModel)]="form.price"
+            #price="ngModel" required>
+
+         <input type="text" id="amount" placeholder="amount of books" name="amount" [(ngModel)]="form.amount"
+            #amount="ngModel" required>
+
+         <input type="submit" class="submit" [disabled]="BookForm.form.invalid">
+
+      </form>
    </div>
-   <div class="v" *ngIf="name.invalid && (name.dirty || name.touched)">
-      * Email field must be valid
-   </div>
-
-
-
-   <div>
-      <label for="author">Author</label>
-      <input type="text" id="author" [(ngModel)]="form.author" name="author" #author="ngModel" placeholder="enter author" required>
-   </div>
-   <div class="v" *ngIf="author.invalid && (author.dirty || author.touched)">
-      * author field must be valid
-   </div>
-
-
-   <div>
-      <label for="image">Image</label>
-      <input type="text" placeholder="enter book image link" id="image" name="image" [(ngModel)]="form.image" #image="ngModel"
-         required>
-   </div>
-   <div class="v" *ngIf="image.invalid && (image.dirty ||image.touched)">
-      * image link field must be valid
-   </div>
-
-
-   <div>
-      <label for="price">Price</label>
-      <input type="text" id="price" placeholder="enter book price" name="price" [(ngModel)]="form.price" #price="ngModel" required>
-   </div>
-   <div class="v" *ngIf="price.invalid && (price.dirty || price.touched)">
-      * price field must be valid
-   </div>
-
-
-   <div>
-      <label for="amount">Amount</label>
-      <input type="text" id="amount" placeholder="amount of books" name="amount" [(ngModel)]="form.amount" #amount="ngModel" required>
-   </div>
-   <div class="v" *ngIf="amount.invalid && (amount.dirty || amount.touched)">
-      * amount field must be valid
-   </div>
-
-   <div>
-      <input type="submit" class="submit" [disabled]="BookForm.form.invalid">
-   </div>
-</form>
-
-
+</div>
