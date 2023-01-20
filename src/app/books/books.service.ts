@@ -17,17 +17,19 @@ export class BooksService {
     return this.http.post(this.baseUrl + 'book', book);
 
   }
+  updateBook(book:Book){
+    return this.http.put(this.baseUrl + 'book/'+ book.id, book);
+  }
+  deleteBook(id: number) {
+    return this.http.delete(this.baseUrl + 'book/' +id );
+  }
   updateAmount(book: Book) {
 
     return this.http.put(this.baseUrl + 'book/'+ book.id, book);
 
   }
-  deleteBook(id: number) {
-    return this.http.delete(this.baseUrl + 'book/' +id );
-  }
-  updateBook(book:Book){
-    return this.http.put(this.baseUrl + 'book/'+ book.id, book);
-  }
+ 
+
 
   getBookById(id: number) {
     return this.http.get(this.baseUrl+'book/'+id)

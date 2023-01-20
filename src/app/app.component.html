@@ -1,6 +1,6 @@
-<nav class="nav">
+<div class="nav">
     <div>
-            <a routerLink="" >Book Shop</a>
+            <a routerLink="/home" >Book Shop</a>
     </div>
     <div>
         <ng-container *ngIf="isAuthenticated() || isLoggedIn">
@@ -17,7 +17,7 @@
             <button (click)="logout()" class="a" >Log Out</button>
         </ng-container>
     </div>
-</nav>
+</div>
 
 <div class="container">
     <router-outlet></router-outlet>
